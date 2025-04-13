@@ -37,3 +37,12 @@ const developer = {
   age: 30,
   isTrainer: false,
 };
+// object with type
+const newDeveloper: { name: string; age: number; isTrainer: boolean } = {
+  name: "adam",
+  age: 30,
+  isTrainer: false,
+};
+newDeveloper.name = 'bolu'
+newDeveloper.age = 'forty'
+newDeveloper.isTrainer = 40
