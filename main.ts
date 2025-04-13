@@ -30,3 +30,10 @@ let salary:number;
 salary = 12000;
 salary = '12000';
 salary = true;
+// object with no type
+const developer = {
+  firstName: "adam",
+  lastName: "smith",
+  age: 30,
+  isTrainer: false,
+};
