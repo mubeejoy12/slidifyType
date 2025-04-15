@@ -43,6 +43,8 @@ const newDeveloper: { name: string; age: number; isTrainer: boolean } = {
   age: 30,
   isTrainer: false,
 };
-newDeveloper.name = 'bolu'
-newDeveloper.age = 'forty'
-newDeveloper.isTrainer = 40
+// array with type
+const languages = ["html", "css", "js"];
+languages.push;
+languages.push(1);
+languages.push(true);
