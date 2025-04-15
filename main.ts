@@ -111,3 +111,11 @@ const safeSubtract = (num1: number, num2: number): number => {
 
 safeSubtract(10, 20);
 
+let numOrStr: number | string;
+
+numOrStr = 10;
+numOrStr = "10";
+numOrStr = true;
+
+let Arr: (number | string)[] = [1, "mubara"];
+
