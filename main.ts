@@ -48,3 +48,7 @@ const languages = ["html", "css", "js"];
 languages.push;
 languages.push(1);
 languages.push(true);
+const arrOfObj: { name: string; age: number }[] = [
+  { name: "adam", age: 30 },
+  { name: "john", age: 25 },
+];
