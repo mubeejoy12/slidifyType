@@ -149,3 +149,20 @@ let betterObj: { name: string; age?: number } = {
   name: "adam",
 };
 
+interface Developer {
+  name: string;
+  age: number;
+  isTrainer: boolean;
+}
+
+const persom1: Developer = {
+  name: "adam",
+  age: 30,
+  isTrainer: false,
+};
+
+const person2: Developer = {
+  name: "john",
+  age: 25,
+  isTrainer: true,
+};
