@@ -119,3 +119,7 @@ numOrStr = true;
 
 let Arr: (number | string)[] = [1, "mubara"];
 
+let myLiteral: "adam" | "john" | "smith";
+myLiteral = "adam";
+myLiteral = "mubaral";
+
