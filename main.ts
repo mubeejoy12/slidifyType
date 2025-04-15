@@ -60,3 +60,16 @@ const arrOfArrays: number[][] = [
 
 arrOfArrays.push([10, 11, 12]);
 arrOfArrays.push([10, 11, "12"]);
+const addNum = (num1, num2) => {
+  return num1 + num2;
+};
+addNum(1, 2);
+addNum(1, "2");
+addNum(1, true);
+
+// function with type
+const multiNumb = (num1: number, num2: number) => {
+  return num1 + num2;
+};
+multiNumb(1, 2);
+multiNumb(1, "2");
