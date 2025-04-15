@@ -166,3 +166,52 @@ const person2: Developer = {
   age: 25,
   isTrainer: true,
 };
+// type
+type DeveloperType = {
+  name: string;
+  age: number;
+  isTrainer: boolean;
+};
+
+const person3: DeveloperType = {
+  name: "adam",
+  age: 30,
+  isTrainer: false,
+};
+
+type personName = string;
+
+const person4: personName = "adam";
+
+type coderType = {
+  name: string;
+  category: "frontend" | "backend" | "fullstack";
+  age: number;
+}[];
+
+const coder: coderType = [
+  { name: "adam", category: "frontend", age: 30 },
+  { name: "john", category: "backend", age: 25 },
+  { name: "smith", category: "fullstack", age: 35 },
+];
+
+// type
+type DeveloperNwType = {
+  name: string;
+  age: number;
+  isDev: boolean;
+};
+
+const person5: DeveloperNwType = {
+  name: "adam",
+  age: 30,
+  isDev: true,
+};
+
+console.log(
+  `${person5.name} is a ${person5.isDev} dev and is a ${person5.age} years old`
+);
+
+type PersonNewName = string;
+const person6: PersonNewName = 'Mousam';
+console.log(`New Developer is ${person6}`);
