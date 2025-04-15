@@ -73,3 +73,41 @@ const multiNumb = (num1: number, num2: number) => {
 };
 multiNumb(1, 2);
 multiNumb(1, "2");
+const modNumber = (num1: number, num2: number): number => {
+  // return num1 % num2;
+  return num1 > num2;
+};
+modNumber(10, 20);
+modNumber(10, "20");
+
+const printSum = (num1: number, num2: number): void => {
+  console.log(num1 + num2);
+};
+printSum(10, 20);
+printSum(10, "20");
+
+const isEven = (num: number): boolean => {
+  return num % 2 === 0;
+};
+isEven(10);
+
+const printFullName = (firstName: string, lastName: string): void => {
+  console.log(`{firstName} ${lastName}`);
+};
+printFullName("adam", "smith");
+
+const getStringLength = (name: string): number => {
+  return name.length;
+};
+getStringLength("adam");
+
+const safeSubtract = (num1: number, num2: number): number => {
+  if (num1 > num2) {
+    return num1 - num2;
+  } else {
+    return num2 - num1;
+  }
+};
+
+safeSubtract(10, 20);
+
