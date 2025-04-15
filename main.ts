@@ -123,3 +123,20 @@ let myLiteral: "adam" | "john" | "smith";
 myLiteral = "adam";
 myLiteral = "mubaral";
 
+enum TrafficLight {
+  red,
+  yelow,
+  green,
+}
+
+const getTrafficLightMessage = (light: TrafficLight): string => {
+  if (light === TrafficLight.red) {
+    return "stop";
+  }
+  if (light === TrafficLight.yelow) {
+    return "Prepare to stop!";
+  }
+  if (light === TrafficLight.green) {
+    return "Go!";
+  }
+};
