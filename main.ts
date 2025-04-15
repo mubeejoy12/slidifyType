@@ -52,3 +52,11 @@ const arrOfObj: { name: string; age: number }[] = [
   { name: "adam", age: 30 },
   { name: "john", age: 25 },
 ];
+const arrOfArrays: number[][] = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+arrOfArrays.push([10, 11, 12]);
+arrOfArrays.push([10, 11, "12"]);
