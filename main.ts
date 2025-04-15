@@ -140,3 +140,12 @@ const getTrafficLightMessage = (light: TrafficLight): string => {
     return "Go!";
   }
 };
+let optionalObj: { name: string; age: number | undefined } = {
+  name: "adam",
+  age: undefined,
+};
+
+let betterObj: { name: string; age?: number } = {
+  name: "adam",
+};
+
