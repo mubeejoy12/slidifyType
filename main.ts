@@ -235,8 +235,9 @@ console.log(
 );
 
 type PersonNewName = string;
-const person6: PersonNewName = 'Mousam';
+const person6: PersonNewName = "Mousam";
 console.log(`New Developer is ${person6}`);
+
 // Classes and Interfaces
 
 // class
@@ -269,6 +270,8 @@ console.log(`New Developer is ${person6}`);
 // shikha.addFamilyMember("Shikha");
 // hriday.addFamilyMember("Hriday");
 // mousam.cleanRoom("Lizol");
+
+// Private and Read-Only Variables
 class CreateRoom {
   public room: string;
   private family: string[] = [];
@@ -286,6 +289,7 @@ const mousam = new CreateRoom("Mousam");
 shikha.dobShikha;
 shikha.dobShikha = "1982-11-12";
 hriday.dobHriday;
+
 class LibraryBook {
   public title: string;
   public author: string;
@@ -323,6 +327,7 @@ book1.getStatus();     // "The Alchemist is available"
 book1.borrowBook();    // "You have borrowed The Alchemist"
 book1.getStatus();     // "The Alchemist is currently borrowed"
 book1.returnBook();    // "You have returned The Alchemist"
+
 // Advanced Classes
 
 class Room {
@@ -363,4 +368,6 @@ class Room {
       console.log(`${this.room} is ${status}.`);
     }
   }
-
+  // getter and setter
+  
+  
