@@ -323,4 +323,44 @@ book1.getStatus();     // "The Alchemist is available"
 book1.borrowBook();    // "You have borrowed The Alchemist"
 book1.getStatus();     // "The Alchemist is currently borrowed"
 book1.returnBook();    // "You have returned The Alchemist"
+// Advanced Classes
+
+class Room {
+    constructor(public room: string) {}
+  
+    cleanRoom(soap: string) {
+      console.log(`Cleaning ${this.room} with ${soap}`);
+    }
+  }
+  
+  class HostelRoom extends Room {
+    private isAvailable: boolean = true;
+  
+    constructor(room: string, public bedCount: number) {
+      super(room);
+    }
+  
+    bookRoom() {
+      if (this.isAvailable) {
+        this.isAvailable = false;
+        console.log(`${this.room} has been booked.`);
+      } else {
+        console.log(`${this.room} is already booked.`);
+      }
+    }
+  
+    releaseRoom() {
+      if (!this.isAvailable) {
+        this.isAvailable = true;
+        console.log(`${this.room} is now available.`);
+      } else {
+        console.log(`${this.room} is already available.`);
+      }
+    }
+  
+    checkAvailability() {
+      const status = this.isAvailable ? "available" : "not available";
+      console.log(`${this.room} is ${status}.`);
+    }
+  }
 
