@@ -237,3 +237,36 @@ console.log(
 type PersonNewName = string;
 const person6: PersonNewName = 'Mousam';
 console.log(`New Developer is ${person6}`);
+// Classes and Interfaces
+
+// class
+
+// class CreateRoom {
+//   public room: string;
+//   private family: string[] = [];
+//   constructor(name: string) {
+//     this.room = `${name}s room`;
+//   }
+
+//   addFamilyMember(member: string) {
+//     this.family.push(member);
+//   }
+//   showFamily() {
+//     console.log(this.family);
+//   }
+
+//   cleanRoom(soap: string) {
+//     console.log("Cleaning ${this.room} with ${soap}");
+//   }
+// }
+
+// const nabendu = new CreateRoom("Nabendu");
+// const shikha = new CreateRoom("Shikha");
+// const hriday = new CreateRoom("Hriday");
+// const mousam = new CreateRoom("Mousam");
+// nabendu.showFamily();
+// nabendu.addFamilyMember("Nabendu");
+// shikha.addFamilyMember("Shikha");
+// hriday.addFamilyMember("Hriday");
+// mousam.cleanRoom("Lizol");
+
