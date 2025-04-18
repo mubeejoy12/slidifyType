@@ -317,4 +317,10 @@ class LibraryBook {
   }
 }
 
+const book1 = new LibraryBook("The Alchemist", "Paulo Coelho", 1988);
+
+book1.getStatus();     // "The Alchemist is available"
+book1.borrowBook();    // "You have borrowed The Alchemist"
+book1.getStatus();     // "The Alchemist is currently borrowed"
+book1.returnBook();    // "You have returned The Alchemist"
 
