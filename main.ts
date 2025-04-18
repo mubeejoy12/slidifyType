@@ -269,4 +269,21 @@ console.log(`New Developer is ${person6}`);
 // shikha.addFamilyMember("Shikha");
 // hriday.addFamilyMember("Hriday");
 // mousam.cleanRoom("Lizol");
+class CreateRoom {
+  public room: string;
+  private family: string[] = [];
+  readonly dobShikha: string = "1982-12-12";
+  private readonly dobHriday: string = "2013-12-12";
+  constructor(name: string) {
+    this.room = "${name}s room";
+  }
+}
+
+const nabendu = new CreateRoom("Nabendu");
+const shikha = new CreateRoom("Shikha");
+const hriday = new CreateRoom("Hriday");
+const mousam = new CreateRoom("Mousam");
+shikha.dobShikha;
+shikha.dobShikha = "1982-11-12";
+hriday.dobHriday;
 
