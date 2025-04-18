@@ -286,4 +286,35 @@ const mousam = new CreateRoom("Mousam");
 shikha.dobShikha;
 shikha.dobShikha = "1982-11-12";
 hriday.dobHriday;
+class LibraryBook {
+  public title: string;
+  public author: string;
+  readonly yearPublished: number;
+  private isBorrowed: boolean = false; 
+
+  constructor(bookTitle: string, bookAuthor: string, publishedYear: number) {
+    this.title = bookTitle;
+    this.author = bookAuthor;
+    this.yearPublished = publishedYear;
+  }
+
+  borrowBook() {
+    this.isBorrowed = true;
+    console.log(`You have borrowed "${this.title}"`);
+  }
+
+  returnBook() {
+    this.isBorrowed = false;
+    console.log(`You have returned "${this.title}`);
+  }
+
+  getStatus() {
+    if (this.isBorrowed) {
+      console.log(`"${this.title}" is currently borrowed`);
+    } else {
+      console.log(`"${this.title}" is available`);
+    }
+  }
+}
+
 
