@@ -272,102 +272,130 @@ console.log(`New Developer is ${person6}`);
 // mousam.cleanRoom("Lizol");
 
 // Private and Read-Only Variables
-class CreateRoom {
-  public room: string;
-  private family: string[] = [];
-  readonly dobShikha: string = "1982-12-12";
-  private readonly dobHriday: string = "2013-12-12";
-  constructor(name: string) {
-    this.room = "${name}s room";
-  }
-}
+// class CreateRoom {
+//   public room: string;
+//   private family: string[] = [];
+//   readonly dobShikha: string = "1982-12-12";
+//   private readonly dobHriday: string = "2013-12-12";
+//   constructor(name: string) {
+//     this.room = "${name}s room";
+//   }
+// }
 
-const nabendu = new CreateRoom("Nabendu");
-const shikha = new CreateRoom("Shikha");
-const hriday = new CreateRoom("Hriday");
-const mousam = new CreateRoom("Mousam");
-shikha.dobShikha;
-shikha.dobShikha = "1982-11-12";
-hriday.dobHriday;
+// const nabendu = new CreateRoom("Nabendu");
+// const shikha = new CreateRoom("Shikha");
+// const hriday = new CreateRoom("Hriday");
+// const mousam = new CreateRoom("Mousam");
+// shikha.dobShikha;
+// shikha.dobShikha = "1982-11-12";
+// hriday.dobHriday;
 
-class LibraryBook {
-  public title: string;
-  public author: string;
-  readonly yearPublished: number;
-  private isBorrowed: boolean = false; 
+// class LibraryBook {
+//   public title: string;
+//   public author: string;
+//   readonly yearPublished: number;
+//   private isBorrowed: boolean = false;
 
-  constructor(bookTitle: string, bookAuthor: string, publishedYear: number) {
-    this.title = bookTitle;
-    this.author = bookAuthor;
-    this.yearPublished = publishedYear;
-  }
+//   constructor(bookTitle: string, bookAuthor: string, publishedYear: number) {
+//     this.title = bookTitle;
+//     this.author = bookAuthor;
+//     this.yearPublished = publishedYear;
+//   }
 
-  borrowBook() {
-    this.isBorrowed = true;
-    console.log(`You have borrowed "${this.title}"`);
-  }
+//   borrowBook() {
+//     this.isBorrowed = true;
+//     console.log(`You have borrowed "${this.title}"`);
+//   }
 
-  returnBook() {
-    this.isBorrowed = false;
-    console.log(`You have returned "${this.title}`);
-  }
+//   returnBook() {
+//     this.isBorrowed = false;
+//     console.log(`You have returned "${this.title}`);
+//   }
 
-  getStatus() {
-    if (this.isBorrowed) {
-      console.log(`"${this.title}" is currently borrowed`);
-    } else {
-      console.log(`"${this.title}" is available`);
-    }
-  }
-}
+//   getStatus() {
+//     if (this.isBorrowed) {
+//       console.log(`"${this.title}" is currently borrowed`);
+//     } else {
+//       console.log(`"${this.title}" is available`);
+//     }
+//   }
+// }
 
 const book1 = new LibraryBook("The Alchemist", "Paulo Coelho", 1988);
 
-book1.getStatus();     // "The Alchemist is available"
-book1.borrowBook();    // "You have borrowed The Alchemist"
-book1.getStatus();     // "The Alchemist is currently borrowed"
-book1.returnBook();    // "You have returned The Alchemist"
+book1.getStatus(); // "The Alchemist is available"
+book1.borrowBook(); // "You have borrowed The Alchemist"
+book1.getStatus(); // "The Alchemist is currently borrowed"
+book1.returnBook(); // "You have returned The Alchemist"
 
 // Advanced Classes
 
 class Room {
-    constructor(public room: string) {}
-  
-    cleanRoom(soap: string) {
-      console.log(`Cleaning ${this.room} with ${soap}`);
+  constructor(public room: string) {}
+
+  cleanRoom(soap: string) {
+    console.log(`Cleaning ${this.room} with ${soap}`);
+  }
+}
+
+class HostelRoom extends Room {
+  private isAvailable: boolean = true;
+
+  constructor(room: string, public bedCount: number) {
+    super(room);
+  }
+
+  bookRoom() {
+    if (this.isAvailable) {
+      this.isAvailable = false;
+      console.log(`${this.room} has been booked.`);
+    } else {
+      console.log(`${this.room} is already booked.`);
     }
   }
-  
-  class HostelRoom extends Room {
-    private isAvailable: boolean = true;
-  
-    constructor(room: string, public bedCount: number) {
-      super(room);
-    }
-  
-    bookRoom() {
-      if (this.isAvailable) {
-        this.isAvailable = false;
-        console.log(`${this.room} has been booked.`);
-      } else {
-        console.log(`${this.room} is already booked.`);
-      }
-    }
-  
-    releaseRoom() {
-      if (!this.isAvailable) {
-        this.isAvailable = true;
-        console.log(`${this.room} is now available.`);
-      } else {
-        console.log(`${this.room} is already available.`);
-      }
-    }
-  
-    checkAvailability() {
-      const status = this.isAvailable ? "available" : "not available";
-      console.log(`${this.room} is ${status}.`);
+
+  releaseRoom() {
+    if (!this.isAvailable) {
+      this.isAvailable = true;
+      console.log(`${this.room} is now available.`);
+    } else {
+      console.log(`${this.room} is already available.`);
     }
   }
-  // getter and setter
-  
-  
+
+  checkAvailability() {
+    const status = this.isAvailable ? "available" : "not available";
+    console.log(`${this.room} is ${status}.`);
+  }
+}
+//   singleton class
+class AppSetting {
+  private static instance: AppSetting;
+  private theme: string = "light"; // default theme
+}
+
+// now moving to interface and stating the difference beyween class and interface
+// class has logic
+class Person {
+  constructor(public name: string) {}
+  greet() {
+    console.log(`Hello ${this.name}`);
+  }
+}
+const user = new Person("Mubarak");
+user.greet();
+
+//interface
+interface Greeting {
+  name: string;
+  greet(sentence: string): void;
+}
+
+class Personer implements Greeting {
+  constructor(public name: string) {}
+  greeter(sentence: string): void {
+    console.log(`${sentence} ${this.name}`);
+  }
+}
+let sentence: Greeting = new Personer('Kapil');
+sentence.greeter('Hello from');
